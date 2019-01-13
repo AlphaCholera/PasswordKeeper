@@ -28,7 +28,6 @@ public class EditOrViewItem extends AppCompatActivity {
     private TextView headingTextView;
     private TextView logo;
     private Button saveButton;
-    private ImageButton visibilityOfPassword;
     private Menu menu;
     private DatabaseManagement db;
     private static final String buttonText = "Save";
@@ -44,7 +43,6 @@ public class EditOrViewItem extends AppCompatActivity {
         username = findViewById(R.id.usernameEditText);
         password = findViewById(R.id.passwordEditText);
         saveButton = findViewById(R.id.addButton);
-        visibilityOfPassword = findViewById(R.id.visibilityImageButton);
 
         db = new DatabaseManagement(this);
         String[] details = db.getDetails(getIntent().getStringExtra("DateAndTimeIntent"));
@@ -85,18 +83,6 @@ public class EditOrViewItem extends AppCompatActivity {
                     }
                     else
                         Toast.makeText(EditOrViewItem.this, "Error in updating..!!!", Toast.LENGTH_LONG).show();
-                }
-            }
-        });
-
-        visibilityOfPassword.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                visibilityOfPassword.setSelected(!visibilityOfPassword.isSelected());
-                if (visibilityOfPassword.isSelected()) {
-                    password.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
-                } else {
-                    password.setTransformationMethod(PasswordTransformationMethod.getInstance());
                 }
             }
         });

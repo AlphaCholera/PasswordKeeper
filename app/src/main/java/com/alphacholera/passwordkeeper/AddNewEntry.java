@@ -18,7 +18,6 @@ import android.widget.Toast;
 public class AddNewEntry extends AppCompatActivity {
     private EditText websiteName, username, password;
     private TextView logo;
-    private ImageButton visibilityOfPassword;
     private Button addButton;
     private DatabaseManagement db;
     @Override
@@ -31,7 +30,6 @@ public class AddNewEntry extends AppCompatActivity {
         password = findViewById(R.id.passwordEditText);
         logo = findViewById(R.id.logo);
         addButton = findViewById(R.id.addButton);
-        visibilityOfPassword = findViewById(R.id.visibilityImageButton);
 
         db = new DatabaseManagement(AddNewEntry.this);
 
@@ -45,18 +43,6 @@ public class AddNewEntry extends AppCompatActivity {
                         Toast.makeText(AddNewEntry.this, "Successfully Added...!!!", Toast.LENGTH_LONG).show();
                         finish();
                     }
-                }
-            }
-        });
-
-        visibilityOfPassword.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                visibilityOfPassword.setSelected(!visibilityOfPassword.isSelected());
-                if (visibilityOfPassword.isSelected()) {
-                    password.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
-                } else {
-                    password.setTransformationMethod(PasswordTransformationMethod.getInstance());
                 }
             }
         });
