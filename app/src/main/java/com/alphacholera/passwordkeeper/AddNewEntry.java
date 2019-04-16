@@ -31,6 +31,7 @@ public class AddNewEntry extends AppCompatActivity {
         logo = findViewById(R.id.logo);
         addButton = findViewById(R.id.addButton);
 
+        getSupportActionBar().setTitle("Add Entry");
         db = new DatabaseManagement(AddNewEntry.this);
 
         addButton.setOnClickListener(new View.OnClickListener() {

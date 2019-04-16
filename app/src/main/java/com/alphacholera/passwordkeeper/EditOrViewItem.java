@@ -44,6 +44,7 @@ public class EditOrViewItem extends AppCompatActivity {
         password = findViewById(R.id.passwordEditText);
         saveButton = findViewById(R.id.addButton);
 
+        getSupportActionBar().setTitle(headingText);
         db = new DatabaseManagement(this);
         String[] details = db.getDetails(getIntent().getStringExtra("DateAndTimeIntent"));
         websiteName.setText(details[0]);
@@ -154,6 +155,7 @@ public class EditOrViewItem extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.edit_item) {
+            getSupportActionBar().setTitle("Edit Entry");
             websiteName.setKeyListener((KeyListener) websiteName.getTag());
             username.setKeyListener((KeyListener) username.getTag());
             password.setKeyListener((KeyListener) password.getTag());
@@ -194,5 +196,4 @@ public class EditOrViewItem extends AppCompatActivity {
         ClipData clipData = ClipData.newPlainText("Source Text", text);
         clipboardManager.setPrimaryClip(clipData);
     }
-    // Override onBackPressed()
 }
