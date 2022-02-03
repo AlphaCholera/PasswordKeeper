@@ -65,9 +65,12 @@ public class AddNewEntry extends AppCompatActivity {
                     logo.setText("");
                 else {
                     StringBuilder builder = new StringBuilder();
-                    for (String string : websiteName.getText().toString().split(" "))
-                        if ((string.charAt(0)>='a' && string.charAt(0)<='z') || (string.charAt(0)>='A' && string.charAt(0)<='Z'))
-                        builder.append(string.charAt(0));
+                    for (String string : websiteName.getText().toString().split(" ")) {
+                        if (string.equals(""))
+                            continue;
+                        if ((string.charAt(0) >= '0' && string.charAt(0) <= '9') || (string.charAt(0) >= 'a' && string.charAt(0) <= 'z') || (string.charAt(0) >= 'A' && string.charAt(0) <= 'Z'))
+                            builder.append(string.charAt(0));
+                    }
                     logo.setText(builder.toString());
                 }
             }
