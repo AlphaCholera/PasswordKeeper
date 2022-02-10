@@ -3,9 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidStudioProjects/PasswordKeeper/app/src/main/res/layout/activity_change_password.xml" value="0.55" />
         <entry key="..\:/AndroidStudioProjects/PasswordKeeper/app/src/main/res/layout/activity_entry_details.xml" value="0.5027173913043478" />
         <entry key="..\:/AndroidStudioProjects/PasswordKeeper/app/src/main/res/layout/activity_main.xml" value="0.5027173913043478" />
         <entry key="..\:/AndroidStudioProjects/PasswordKeeper/app/src/main/res/layout/activity_password_verification.xml" value="0.5027173913043478" />
+        <entry key="..\:/AndroidStudioProjects/PasswordKeeper/app/src/main/res/layout/activity_view_all_passwords.xml" value="0.55" />
+        <entry key="..\:/AndroidStudioProjects/PasswordKeeper/app/src/main/res/layout/content_view_all_passwords.xml" value="0.55" />
+        <entry key="..\:/AndroidStudioProjects/PasswordKeeper/app/src/main/res/layout/recycler_view_item.xml" value="0.5027173913043478" />
       </map>
     </option>
   </component>
